@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-
+//??? Is this messed up
 const Post = (props) => {
 
     const [name, setName] = useState("");

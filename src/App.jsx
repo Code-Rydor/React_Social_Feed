@@ -1,16 +1,20 @@
 import React, { useState } from 'react';
-import Post from './components/post/Post';
+import DisplayPosts from './components/DisplayPosts';
+import Post from './components/Post';
 
 
 
 
 function App() {
 
-//const [name, setName] = useState([{Name: "Garrett", Post: "How are you?"}])
+  const [postData, setPostData] = useState([
+    { name: "" },
+    { post: "" }
+  ]);
 
   return (
     <div>
-      <Post />
+      <DisplayPosts data={postData} /> //??? How did I mess this up
     </div>
   );
 }
