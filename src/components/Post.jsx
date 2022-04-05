@@ -1,4 +1,5 @@
 import React from 'react';
+import LikeDislikeButtons from './LikeDislikeButtons';
 
 
 
@@ -7,8 +8,8 @@ const Post = ({dataItem}) => {
         <div>
             <h3>{dataItem.name}</h3>
             <p>{dataItem.post}</p>
-            <button type='button'>Like</button>
-            <button type='button'>Dislike</button>
+
+            <LikeDislikeButtons/>
             
         </div>
      );

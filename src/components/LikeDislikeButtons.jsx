@@ -1,12 +1,28 @@
-import React from 'react';
+import React, { useState } from 'react';
+import "./LikeDislikeButtons.css"
 
-const LikeDislike = (props) => {
+const LikeDislikeButtons = (props) => {
+
+    const [buttonClass, setButtonClass] = useState('inactive');
+
+    function handleClick() {
+        if (buttonClass === 'inactive') {
+            setButtonClass('active');
+        }
+        else {
+            setButtonClass('inactive');
+        }
+    }
     return ( 
         <div>
-            <button type='button'>Like</button>
-            <button type='button'>Dislike</button>
+            <button className={buttonClass} onClick={handleClick}>Like</button>
+            
         </div>
      );
 }
  
-export default LikeDislike;
+export default LikeDislikeButtons;
+
+//<button className='active' onClick={handleClick}>Dislike</button>
+
+// ??? Can you have multiple classNames for a single button
