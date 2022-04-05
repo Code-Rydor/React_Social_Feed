@@ -1,12 +1,13 @@
 import React from 'react';
-import LikeDislike from './LikeDislike';
+import Post from './Post'
+
 
 
 
 const DisplayPosts = ({parentData}) => {
     return ( 
         <ul>
-            {parentData.map((dataItem, index) => <li key={index}> {dataItem.name}  {dataItem.post}  {LikeDislike()}</li>)}
+            {parentData.map((dataItem, index) => <li key={index}><Post dataItem={dataItem}/></li>)}
         </ul>
      );
 }
