@@ -17,7 +17,8 @@ function App() {
   return (
     <div>
       <CreatePost addNewPostProperty={addNewPost} />
-      <DisplayPosts parentData={postData} /> 
+      <hr></hr>
+      <DisplayPosts parentData={postData} />
     </div>
   );
 }
