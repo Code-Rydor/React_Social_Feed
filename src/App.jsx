@@ -1,20 +1,23 @@
 import React, { useState } from 'react';
 import DisplayPosts from './components/DisplayPosts';
-import Post from './components/Post';
+import CreatePost from './components/CreatePost';
 
 
 
 
 function App() {
 
-  const [postData, setPostData] = useState([
-    { name: "" },
-    { post: "" }
-  ]);
+  const [postData, setPostData] = useState([])
+  
+  function addNewPost(post) {
+    let tempPost = [...postData, post];
+    setPostData(tempPost);
+  }
 
   return (
     <div>
-      <DisplayPosts data={postData} /> //??? How did I mess this up
+      <CreatePost addNewPostProperty={addNewPost} />
+      <DisplayPosts parentData={postData} /> 
     </div>
   );
 }

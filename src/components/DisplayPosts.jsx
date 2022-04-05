@@ -1,11 +1,11 @@
 import React from 'react';
-import Post from './Post';
 
-//??? How did I mess this up
-const DisplayPosts = ({data}) => {
+
+
+const DisplayPosts = ({parentData}) => {
     return ( 
         <ul>
-            {data.map((dataItem) => <li><Post newPost = {dataItem}/></li>)}
+            {parentData.map((dataItem, index) => <li key={index}> {dataItem.name}  {dataItem.post}</li>)}
         </ul>
      );
 }
