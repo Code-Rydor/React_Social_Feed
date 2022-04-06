@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import DisplayPosts from './components/DisplayPosts';
-import CreatePost from './components/CreatePost';
+import CreatePost from './components/CreatePost/CreatePost.jsx';
 
 
 
