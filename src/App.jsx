@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import DisplayPosts from './components/DisplayPosts';
+import DisplayPosts from './components/DisplayPosts/DisplayPosts';
 import CreatePost from './components/CreatePost/CreatePost.jsx';
-
+import NavBar from './components/NavBar/NavBar';
+import './App.css'
 
 
 
@@ -16,9 +17,13 @@ function App() {
 
   return (
     <div>
+      <div style={{margin: '1em'}}>
+        <NavBar/>
+      </div>
+      <div>
       <CreatePost addNewPostProperty={addNewPost} />
-      <hr></hr>
       <DisplayPosts parentData={postData} />
+      </div>
     </div>
   );
 }

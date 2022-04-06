@@ -19,7 +19,7 @@ const Post = (props) => {
     }
     
     return ( 
-        <div>
+        <div className='container'>
             <form onSubmit={handleSubmit}>
                 <label>Name</label>
                 <input type='text' placeholder='Your name here...' value={name} onChange={(event) => setName(event.target.value)} />
